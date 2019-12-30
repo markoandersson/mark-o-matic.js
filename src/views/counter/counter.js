@@ -1,7 +1,7 @@
 //@flow
-import { createReducer } from "@reduxjs/toolkit";
-import { createPrefixedActionCreator } from "../../shared/action-creator";
-import Get from "lodash/get";
+import { createReducer } from '@reduxjs/toolkit';
+import { createPrefixedActionCreator } from '../../shared/action-creator';
+import Get from 'lodash/get';
 
 const ACTION_PREFIX = 'mark-o-matic.js/counter';
 const createAction = createPrefixedActionCreator(ACTION_PREFIX);
@@ -24,8 +24,7 @@ export const actions = {
 };
 
 export const selectors = {
-  count: (state: StateWithCounter) => Get(state, 'counter.count', 0)  
-  
+  count: (state: StateWithCounter) => Get(state, 'counter.count', 0)
 };
 
 export default createReducer(initialState, {

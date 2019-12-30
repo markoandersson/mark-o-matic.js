@@ -27,7 +27,8 @@
       "comment": "Allow only import shared components via index.js exports",
       "severity": "error",
       "from": {
-        "path": "^src/views/.+/([^/]+).js$"
+        "path": "^src/views/.+/([^/]+).js$",
+        "pathNot": ".(test|spec).js$"
       },
       "to": {
         "pathNot": "(^src/views/|^src/shared/.+/index\\.js|^node_modules)"
@@ -42,6 +43,12 @@
         "path": "^src/views/([^/]+)/.+",
         "pathNot": "^src/views/$1/.+"
       }
+    },{
+      "name": "arc:not-to-test",
+      "comment": "Don't allow dependencies from test-code to production-code",
+      "severity": "error",
+      "from": { "pathNot": ".(test|spec).js$" },
+      "to": { "path": ".(test|spec).js$" }
     }
   ],
   "options": {

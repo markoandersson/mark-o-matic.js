@@ -1,2 +1,2 @@
 export { CounterPage } from './counter-page';
-export {default} from './counter'
+export { default } from './counter';

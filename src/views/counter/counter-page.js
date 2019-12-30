@@ -1,5 +1,5 @@
 import React from 'react';
-import { CounterComponent } from "./counter-component";
+import { CounterComponent } from './counter-component';
 export const CounterPage = () => {
   return (
     <div>
