@@ -43,7 +43,7 @@ const fetchDataFromBackend = (request: BackendRequest) => (dispatch: Dispatch<RS
 };
 
 export const selectors = {
-  isLoading: (state: GlobalState) => Get(state, 'backend.loading', false),
+  isLoading: (state: GlobalState): boolean => Get(state, 'backend.loading', false),
   getResponse: (state: GlobalState) => state.backend.response
 };
 

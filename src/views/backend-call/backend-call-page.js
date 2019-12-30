@@ -1,7 +1,8 @@
+// @flow
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectors, actions } from './backend-call';
-import { Button, PageHeader } from 'antd';
+import { Button } from 'antd';
 
 export const BackendCallPage = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,6 @@ export const BackendCallPage = () => {
 
   return (
     <div>
-      <PageHeader title="API fetch" />
       <Button onClick={onLoad} loading={loading}>
         Fetch from back-end
       </Button>

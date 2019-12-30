@@ -1,3 +1,4 @@
+// @flow
 import { Badge, Button, Col, Row } from 'antd';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

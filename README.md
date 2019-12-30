@@ -18,6 +18,20 @@ architectural constraints, and my opinion of React/Redux best practices.
 - [Styled components](https://www.styled-components.com/) - big boys are using this
 - [React router](https://github.com/ReactTraining/react-router) - routing? yes please!
 
+## Contribute
+
+1. `npm install`
+1. `npm run mock-backend`
+1. `npm run start`
+
+Check architectural constraints:
+
+1. `npm run "validate dependencies"`
+
+Run unit tests:
+
+1. `npm run test`
+
 ## Decisions
 
 ### Static typing
