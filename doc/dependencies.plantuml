@@ -1,0 +1,18 @@
+@startuml
+
+[App] as app
+
+together {
+    [Home page] as home
+    [Home component] as homeComponent
+    [Feature 1 page] as feature1
+}
+
+app -u-> home: index.js exports
+home -u-> homeComponent
+app -u-> feature1: index.js exports
+
+home -[#red]l-> feature1: not allowed
+app -[#red]l-> homeComponent: not allowed
+
+@enduml

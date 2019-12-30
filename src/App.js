@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from 'antd';
+import styled from 'styled-components';
+import 'antd/dist/antd.css';
+import { Navigation, Routes } from './navigation';
 
-function App() {
+const Title = styled.div`
+  font-size: 3rem;
+  padding-left: 5rem;
+`;
+
+const App = () => {
+  const { Header, Footer, Sider, Content } = Layout;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Sider>
+        <div className="logo" />
+        <Navigation />
+      </Sider>
+      <Layout>
+        <Header style={{ background: '#fff', padding: 0 }}>
+          <Title>Mark-o-matic.js</Title>
+        </Header>
+        <Content style={{ margin: '0 16px' }}>
+          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+            <Routes />
+          </div>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
+      </Layout>
+    </Layout>
   );
-}
+};
 
 export default App;
