@@ -14,6 +14,7 @@ architectural constraints, and my opinion of React/Redux best practices.
 - [Testing library for React](https://testing-library.com/) - Shallow render the React components in unit tests
 - [Ant design](https://ant.design/) - Well, you'll need a UI library, right?
 - [Prettier](https://prettier.io/) - You'll need to format your code in order to be a professional, right?
+- [ESLint with prettier](https://prettier.io/docs/en/integrating-with-linters.html) - 
 - [Styled components](https://www.styled-components.com/) - big boys are using this
 - [React router](https://github.com/ReactTraining/react-router) - routing? yes please!
 

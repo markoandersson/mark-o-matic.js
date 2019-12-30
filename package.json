@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.7.7",
     "@reduxjs/toolkit": "^1.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -17,6 +18,7 @@
     "react-scripts": "3.3.0",
     "redux": "^4.0.5",
     "redux-api-middleware": "^3.1.0",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {
@@ -26,7 +28,8 @@
     "eject": "react-scripts eject",
     "flow": "flow",
     "install flow types": "flow-typed install --overwrite",
-    "validate dependencies": "depcruise --validate .dependency-cruiser.json src"
+    "validate dependencies": "depcruise --validate .dependency-cruiser.json src",
+    "mock-backend": "json-server mocks/api.json --routes mocks/routes.json --port 5001 --watch --delay 1000"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,8 +48,13 @@
   },
   "devDependencies": {
     "dependency-cruiser": "^6.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-flowtype": "^4.5.2",
+    "eslint-plugin-prettier": "^3.1.2",
     "flow-bin": "^0.114.0",
     "flow-typed": "^2.6.2",
+    "flux-standard-action": "^2.1.1",
+    "json-server": "^0.15.1",
     "prettier": "^1.19.1",
     "redux-devtools": "^3.5.0"
   }
