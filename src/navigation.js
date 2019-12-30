@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import { HomePage } from './views/home';
 import { CounterPage } from './views/counter';
+import { BackendCallPage } from './views/backend-call';
 
 export const Navigation = () => {
   return (
@@ -18,8 +19,9 @@ export const Navigation = () => {
         <Link to="/counter" />
       </Menu.Item>
       <Menu.Item key="3">
-        <Icon type="file" />
-        <span>File</span>
+        <Icon type="cloud-download" />
+        <span>API-call</span>
+        <Link to="/api-call" />
       </Menu.Item>
     </Menu>
   );
@@ -30,6 +32,9 @@ export const Routes = () => {
     <Switch>
       <Route path="/counter">
         <CounterPage />
+      </Route>
+      <Route path="/api-call">
+        <BackendCallPage />
       </Route>
       <Route path="/">
         <HomePage />
