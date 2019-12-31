@@ -5,9 +5,6 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@reduxjs/toolkit": "^1.2.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "antd": "^3.26.5",
     "core-js": "^3.6.1",
     "lodash": "latest",
@@ -54,8 +51,13 @@
     "flow-bin": "^0.114.0",
     "flow-typed": "^2.6.2",
     "flux-standard-action": "^2.1.1",
+    "jest-fetch-mock": "^3.0.1",
     "json-server": "^0.15.1",
     "prettier": "^1.19.1",
-    "redux-devtools": "^3.5.0"
+    "redux-devtools": "^3.5.0",
+    "@testing-library/dom": "^6.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
   }
 }

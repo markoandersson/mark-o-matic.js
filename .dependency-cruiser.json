@@ -49,6 +49,17 @@
       "severity": "error",
       "from": { "pathNot": ".(test|spec).js$" },
       "to": { "path": ".(test|spec).js$" }
+    },
+    {
+      "name": "arc:no-non-index-test-imports",
+      "comment": "Don't allow test code to import dependencies other than exposed via index.js",
+      "severity": "error",
+      "from": {
+        "path": ".(test|spec).js$"
+      },
+      "to": {
+        "pathNot": "(^src/views|index.js$|^node_modules)"
+      }
     }
   ],
   "options": {

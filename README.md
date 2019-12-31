@@ -8,15 +8,18 @@ architectural constraints, and my opinion of React/Redux best practices.
 - [Redux](https://redux.js.org/), React-redux and redux-devtools - state management
 - [Redux-toolkit](https://github.com/reduxjs/redux-toolkit) - reduces the Redux boilerplate
 - [Redux-api-middleware](https://github.com/agraboso/redux-api-middleware) - standard way of calling external APIs
-- [Flow](https://flow.org/) - Static type checking for Javascript
 - Variation of [ducks](https://github.com/erikras/ducks-modular-redux) - Improved standard how reducer, actions and selectors are exported from the components.
-- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) - enforce architectural constraints
-- [Testing library for React](https://testing-library.com/) - Shallow render the React components in unit tests
 - [Ant design](https://ant.design/) - Well, you'll need a UI library, right?
-- [Prettier](https://prettier.io/) - You'll need to format your code in order to be a professional, right?
-- [ESLint with prettier](https://prettier.io/docs/en/integrating-with-linters.html) - 
 - [Styled components](https://www.styled-components.com/) - big boys are using this
 - [React router](https://github.com/ReactTraining/react-router) - routing? yes please!
+
+Development dependencies:
+- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) - enforce architectural constraints
+- [Flow](https://flow.org/) - Static type checking for Javascript
+- [Testing library for React](https://testing-library.com/) - Shallow render the React components in unit tests
+- [Jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock) - Mocking fetch API -calls with this library is a joy!
+- [Prettier](https://prettier.io/) - You'll need to format your code in order to be a professional, right?
+- [ESLint with prettier](https://prettier.io/docs/en/integrating-with-linters.html) - 
 
 ## Contribute
 
@@ -59,3 +62,5 @@ This project uses React testing library which is automatically added by CRA. Tes
 All elements in the component are accessed in similar manner than user would access the components, e.g. by title, by text etc.
 
 Tests in this project use the same redux store than the implementation components so that the whole stack will be tested (React component and redux store).
+
+External API-calls have been mocked with `jest-fetch-mock`-library, thus the whole stack from the UI to the external service and back can be tested with single unit test.
