@@ -10,7 +10,7 @@ const Title = styled.div`
 `;
 
 const App = () => {
-  const { Header, Footer, Sider, Content } = Layout;
+  const { Header, Sider, Content } = Layout;
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
