@@ -3905,10 +3905,10 @@ depd@~1.1.2:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
-dependency-cruiser@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/dependency-cruiser/-/dependency-cruiser-6.0.0.tgz#bfb38d1d7c24e518e6382c34a7fe64b992d954d2"
-  integrity sha512-HOACSG+Y2l2a6kH+v6DNrt88KToxrlroudRZsx9itPzlVWOfgx77qbkGfM31iD86f2xX6KOYzwcKlwnH46+Wmw==
+dependency-cruiser@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/dependency-cruiser/-/dependency-cruiser-6.1.0.tgz#188b233c537c4c411b34fb9f16604ad1915528f4"
+  integrity sha512-z6FN6TSidEjqdErqC9as+QFhr274F4MlM6fQ7xIiq0ifInBrXxSCe8JX9EYWha7X9skD8fTbCG7ScNRHkDrXJA==
   dependencies:
     acorn "7.1.0"
     acorn-loose "7.0.0"
@@ -3922,9 +3922,8 @@ dependency-cruiser@^6.0.0:
     glob "7.1.6"
     handlebars "4.5.3"
     indent-string "4.0.0"
-    inquirer "7.0.0"
+    inquirer "7.0.1"
     lodash "4.17.15"
-    mnemonic-words "1.1.0"
     pnp-webpack-plugin "1.5.0"
     regexp-tree "0.1.17"
     semver "6.3.0"
@@ -5955,7 +5954,26 @@ inquirer@6.5.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@7.0.0, inquirer@^7.0.0:
+inquirer@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.0.1.tgz#13f7980eedc73c689feff3994b109c4e799c6ebb"
+  integrity sha512-V1FFQ3TIO15det8PijPLFR9M9baSlnRs9nL7zWu1MNVA2T9YVl9ZbrHJhYs7e9X8jeMZ3lr2JH/rdHFgNCBdYw==
+  dependencies:
+    ansi-escapes "^4.2.1"
+    chalk "^2.4.2"
+    cli-cursor "^3.1.0"
+    cli-width "^2.0.0"
+    external-editor "^3.0.3"
+    figures "^3.0.0"
+    lodash "^4.17.15"
+    mute-stream "0.0.8"
+    run-async "^2.2.0"
+    rxjs "^6.5.3"
+    string-width "^4.1.0"
+    strip-ansi "^5.1.0"
+    through "^2.3.6"
+
+inquirer@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.0.0.tgz#9e2b032dde77da1db5db804758b8fea3a970519a"
   integrity sha512-rSdC7zelHdRQFkWnhsMu2+2SO41mpv2oF2zy4tMhmiLWkcKbOAs87fWAJhVXttKVwhdZvymvnuM95EyEXg2/tQ==
@@ -7761,11 +7779,6 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
-
-mnemonic-words@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/mnemonic-words/-/mnemonic-words-1.1.0.tgz#3a51a71aad51435a19e6ffb7028775da43357471"
-  integrity sha512-b327H3DdGw5EsM+Lv6ujPrA28JPpJSQuVsG+n63h7puYerBEOE/00Jz/XJmnx1fvjSLWmFeQtSFKrhX7g3jQuQ==
 
 moment@2.x, moment@^2.24.0:
   version "2.24.0"
@@ -10877,6 +10890,13 @@ rxjs@^6.4.0:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
   integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
+  dependencies:
+    tslib "^1.9.0"
+
+rxjs@^6.5.3:
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
+  integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
   dependencies:
     tslib "^1.9.0"
 

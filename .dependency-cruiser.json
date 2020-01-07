@@ -64,6 +64,9 @@
   ],
   "options": {
     "doNotFollow": "node_modules",
-    "moduleSystems": ["es6"]
+    "moduleSystems": ["es6"],
+    "exclude": {
+      "path": "mocks/api$"
+    }
   }
 }
