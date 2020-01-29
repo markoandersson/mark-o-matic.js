@@ -14,17 +14,21 @@ const getApiResponse = url => {
 /**
  * Will return response from json-server api definition file according to requested path.
  */
-export const mockApiResponse = () => {
+export const useJsonServerResponses = () => {
   return fetch.mockResponse(req => {
     const response = getApiResponse(req.url);
     return Promise.resolve(JSON.stringify(response));
   }, init);
 };
 
+export const mockApiError = (message = 'Error') => {
+  return fetch.mockReject(new Error(message));
+};
+
 /**
  * Will return given response when next fetch api call is triggered
  */
-export const mockResponse = response => {
+export const mockApiResponse = response => {
   return fetch.mockResponse(JSON.stringify(response), init);
 };
 

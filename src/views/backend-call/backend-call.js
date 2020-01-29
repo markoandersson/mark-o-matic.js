@@ -58,11 +58,12 @@ export default createReducer(initialState, {
   },
   [fetchDataFromBackendSuccess](state: BackendCallState, action) {
     state.loading = false;
-    state.response = Get(action, 'payload.response', '');
+    state.response = Get(action, 'payload.response', 'Invalid response');
     message.success('Fetch succeeded!');
   },
   [fetchDataFromBackendFailure](state: BackendCallState) {
     state.loading = false;
+    state.response = 'Failed to fetch data';
     message.error('Fetch failed');
   }
 });

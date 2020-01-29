@@ -1,8 +1,9 @@
 import React from 'react';
-import { mockApiResponse, mockResponse, renderWithRedux, resetMockedResponses } from '../../test-utils';
+import { mockApiResponse, renderWithRedux, resetMockedResponses } from '../../test-utils';
 import { BackendCallComponent } from './backend-call-component';
 import { fireEvent } from '@testing-library/react';
 import { waitForElement } from '@testing-library/dom';
+import { mockApiError } from '../../test-utils/mock-fetch';
 
 describe('Test backend call component', function() {
   afterEach(() => {
@@ -13,18 +14,43 @@ describe('Test backend call component', function() {
     const { getByText, container } = renderWithRedux(<BackendCallComponent />);
 
     return {
-      button: getByText(/fetch/i),
+      button: getByText(/fetch from back-end/i),
       getLabel: async () => await waitForElement(() => getByText(/response/i), { container })
     };
   };
 
-  it('should call backend', async function() {
-    mockApiResponse();
-
+  const callBackendAndGetLabel = async () => {
     const { button, getLabel } = renderComponent();
 
     fireEvent.click(button);
+    return await getLabel();
+  };
 
-    expect(await getLabel()).toHaveTextContent('hello');
+  it('should call backend and display response', async function() {
+    mockApiResponse({
+      response: 'hello'
+    });
+
+    const label = await callBackendAndGetLabel();
+
+    expect(label).toHaveTextContent('hello');
+  });
+
+  it('should handle invalid response', async function() {
+    mockApiResponse({
+      wrongkey: 'wrong value'
+    });
+
+    const label = await callBackendAndGetLabel();
+
+    expect(label).toHaveTextContent('Invalid response');
+  });
+
+  it('should handle fetch failure', async function() {
+    mockApiError('Failed to fetch data');
+
+    const label = await callBackendAndGetLabel();
+
+    expect(label).toHaveTextContent('Failed');
   });
 });
