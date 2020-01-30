@@ -22,3 +22,6 @@ jobs:
     - run: npm test
       env:
         CI: true
+    - run: npm run validate_architecture
+      env:
+        CI: true
