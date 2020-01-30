@@ -3,6 +3,8 @@
 An opinionated React/Redux-project boilerplate/example bootstrapped with create-react-app, which tries to enforce good 
 architectural constraints, and my opinion of React/Redux best practices.
 
+![Node.js CI](https://github.com/markoandersson/mark-o-matic.js/workflows/Node.js%20CI/badge.svg)
+
 ## Stack
 
 - [Redux](https://redux.js.org/), React-redux and redux-devtools - state management
