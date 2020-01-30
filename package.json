@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "flow": "flow",
     "install flow types": "flow-typed install --overwrite",
-    "validate dependencies": "depcruise --validate .dependency-cruiser.json src",
+    "validate_architecture": "depcruise --validate .dependency-cruiser.json src",
     "mock-backend": "json-server mocks/api.json --routes mocks/routes.json --port 5001 --watch --delay 1000"
   },
   "eslintConfig": {
