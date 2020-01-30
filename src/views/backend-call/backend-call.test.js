@@ -1,9 +1,8 @@
 import React from 'react';
-import { mockApiResponse, renderWithRedux, resetMockedResponses } from '../../test-utils';
+import { mockApiResponse, renderWithRedux, resetMockedResponses, mockApiError } from '../../test-utils';
 import { BackendCallComponent } from './backend-call-component';
 import { fireEvent } from '@testing-library/react';
 import { waitForElement } from '@testing-library/dom';
-import { mockApiError } from '../../test-utils/mock-fetch';
 
 describe('Test backend call component', function() {
   afterEach(() => {
